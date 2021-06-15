@@ -3,8 +3,7 @@ import { useState } from 'react';
 import { selectForm } from '../redux/actions';
 import { useDispatch } from 'react-redux';
 import { message, Button, Space } from 'antd';
-import { BrowserRouter, Switch, Route, Router, useHistory, Link } from 'react-router-dom';
-// import OTPInput, { ResendOTP } from ""
+import { useHistory, Link } from 'react-router-dom';
 import '../css/login.css';
 import '../css/mainPage.css';
 import { login } from '../services/userServices';
@@ -13,7 +12,6 @@ import React from 'react';
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [img, setImage] = useState(null);
   const history = useHistory();
   const [validator, setValidator] = useState(false); 
   const [inputScreen, setInputScreen] = useState('credentials');

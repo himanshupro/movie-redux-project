@@ -1,61 +1,19 @@
-import { Upload, Button } from 'antd';
-import { UploadOutlined } from '@ant-design/icons';
 import { TextField } from '@material-ui/core';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { FilePicker } from 'evergreen-ui';
 import '../css/login.css';
 import { selectForm } from '../redux/actions';
 import { signUp } from '../services/userServices';
 
 const SignUpForm = () => {
-  // const [firstName, setFirstName] = useState('');
-  // const [lastName, setLastName] = useState('');
   const [userName, setUsername] = useState('');
   const [email, setEmail] = useState('');
-  // const [phoneNumber, setPhoneNumber] = useState('');
   const [gender, setGender] = useState('');
-  // const [profileImage, setProfileImage] = useState('');
-  // const [bioData, setBioData] = useState('');
   const [password, setPassword] = useState('');
-  // const [confirmPassword, setConfirmPassword] = useState('');
 
   const dispatch = useDispatch();
 
-  // const handleFileUpload = (e: any) => {
-  //   console.log('Enter ', e.target.files);
-
-  //   setProfileImage(e.target.files[0]);
-  // };
-
-  // const handleSubmit = (e: any) => {
-  //   e.preventDefault();
-  //   console.log();
-  //   const formData: any = new FormData();
-
-  //   formData.append('firstName', firstName);
-
-  //   formData.append('lastName', lastName);
-
-  //   formData.append('email', email);
-
-  //   formData.append('phoneNumber', phoneNumber);
-
-  //   formData.append('gender', gender);
-
-  //   formData.append('bioData', bioData);
-
-  //   formData.append('password', password);
-
-  //   formData.append('passwordConfirm', confirmPassword);
-
-  //   formData.append('profileImage', profileImage);
-  //   for (let val of formData.entries()) {
-  //     console.log(val);
-  //   }
-  //   signUp(dispatch, formData);
-  // };
-
+  
   const handleSubmit = (e: any) => {
     e.preventDefault();
     const data: any = {
@@ -80,24 +38,10 @@ const SignUpForm = () => {
           <div className='row mb-4'>
             <div className='col'>
               <div className='form-outline'>
-                {/* <TextField
-                  className='textfield'
-                  label='First Name'
-                  value={firstName}
-                  onChange={(e: any) => setFirstName(e.target.value)}
-                /> */}
+                
               </div>
             </div>
-            {/* <div className='col'>
-              <div className='form-outline'>
-                <TextField
-                  className='textfield'
-                  label='Last Name'
-                  value={lastName}
-                  onChange={(e: any) => setLastName(e.target.value)}
-                />
-              </div>
-            </div> */}
+            
           </div>
           <div className='form-outline mb-4'>
             <TextField
@@ -109,19 +53,6 @@ const SignUpForm = () => {
               }}
             />
           </div>
-
-          {/* <div className='form-outline mb-4'>
-            <TextField
-              className='textfield'
-              label='Phone'
-              value={phoneNumber}
-              helperText=''
-              error={false}
-              onChange={(e: any) => {
-                setPhoneNumber(e.target.value);
-              }}
-            />
-          </div> */}
           <div className='form-outline mb-4'>
             <TextField
               className='textfield'
@@ -143,20 +74,6 @@ const SignUpForm = () => {
               }}
             />
           </div>
-          {/* <div className='form-outline mb-4'>
-        <input type="file" onChange={(e:any) => handleFileUpload(e) }></input>
-          </div> */}
-          {/* <div className='form-outline mb-4'>
-            <TextField
-              className='textfield'
-              label='Bio'
-              value={bioData}
-              onChange={(e: any) => {
-                setBioData(e.target.value);
-              }}
-            />
-          </div> */}
-
           <div className='form-outline mb-4'></div>
           <div className='row mb-4'>
             <div className='col'>
@@ -172,19 +89,6 @@ const SignUpForm = () => {
                 />
               </div>
             </div>
-            {/* <div className='col'>
-              <div className='form-outline'>
-                <TextField
-                  className='textfield'
-                  type='password'
-                  label='Password'
-                  value={confirmPassword}
-                  onChange={(e: any) => {
-                    setConfirmPassword(e.target.value);
-                  }}
-                />
-              </div>
-            </div> */}
           </div>
 
           <button type='submit' className='btn btn-primary btn-block mb-4 submit-btn' onClick={(e) => handleSubmit(e)}>

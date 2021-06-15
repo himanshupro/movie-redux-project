@@ -1,17 +1,19 @@
 export interface UserSignUp {
-    // firstName : String,
-    // lastName : String,
     userName: String,
     email : String,
-    // phoneNumber : String,
     gender : String,
-    // profileImage : String,
-    // bioData : String,
     password : String,
-    // confirmPassword : String
 }
 
 export interface UserLogin {
     userId: String,
     password: String
+}
+
+export interface MovieDetails {
+    imdbID : String,
+    title : String,
+    imdbRating : Number,
+    year : Number,
+    poster : String
 }

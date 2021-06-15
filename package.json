@@ -1,5 +1,5 @@
 {
-  "name": "chating-app",
+  "name": "movie-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,6 +17,7 @@
     "axios": "^0.21.1",
     "evergreen-ui": "^6.0.1",
     "mdb-react-ui-kit": "^1.0.0-beta6",
+    "mdbreact": "^5.0.2",
     "otp-input-react": "^0.2.4",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",

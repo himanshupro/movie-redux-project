@@ -14,17 +14,3 @@ export const login = async (user: UserLogin) => {
   console.log('Login Response  ', res);
   return res;
 };
-
-export const checkOtp = async (otp: any) => {
-  let res = await axios.post(
-    'http://localhost:4000/api/users-verify',
-    { otp },
-    {
-      headers: {
-        authorization: 'Bearer ' + localStorage.getItem('login'),
-      },
-    }
-  );
-  console.log('Login Response  ', res);
-  return res;
-};

@@ -1,9 +1,12 @@
 import { createStore, combineReducers } from "redux";
-import { formReducer, usersChatsReducer } from "./reducer";
+// import { formReducer, movieReducer, searchMovieByIdReducer,  searchMovieByTitleReducer} from "./reducer";
+import { formReducer, movieReducer } from "./reducer";
 
 const reducer = combineReducers({
-  form: formReducer,
-  chat : usersChatsReducer
+  form: formReducer, 
+  movies : movieReducer,
+  // searchById :  searchMovieByIdReducer,
+  // searchByTitle:  searchMovieByTitleReducer
 });
 
 const store = createStore(reducer);

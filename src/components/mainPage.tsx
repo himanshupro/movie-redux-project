@@ -27,14 +27,10 @@ const MainPage = () => {
         <div style={style} className='main-form'>
           {displayForm === 'LOGIN_FORM' ? <LoginForm /> : <SignUpForm />}
         </div>
-        <img
-          className='image-div'
-          src='https://i.pinimg.com/564x/6b/c9/6f/6bc96febb1036577f1af694d6b1484b1.jpg'
-          alt='some img'
-        ></img>
-        {/* <h1>discuter</h1>
+        
+        <h1>Movie Web App</h1>
       <br />
-      <h2>It helps you connect and share with the people in your life.</h2> */}
+      <h2>Search your favourite movie.....</h2>
       </div>
     </div>
   );
